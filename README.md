@@ -14,3 +14,10 @@
 - 遍历切片，以Goods结构体的成员声明item结构体（item结构体的其他不存在于Goods结构体的成员均赋予默认值）
 - 以遍历Goods切片的键k为ItemMap的键插入k-item
 - 在goroutine内调用wg.Done方法，并在外调用wg.Wait方法
+#### 遇到的问题：
+- 使用sync.WaitGroup还是直接使用for死循环+time.Sleep
+- wg.Add传入多少的值
+- wg.Done放goroutine内还是goroutine外
+- 获取输入的商品信息中的Price和Num直接用ctx.GetInt还是用ctx.PostForm后再用strconv.Atoi
+- 代码中原已存在的函数或方法是否必须使用，是否可以新建函数或方法、路由
+- 注释时service包的sec_kill类中的item.Done是否是商品已售完情况下的操作
